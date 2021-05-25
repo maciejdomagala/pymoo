@@ -316,6 +316,9 @@ class Algorithm:
         # create the result object
         res.problem, res.pf = self.problem, self.pf
         res.history = self.history
+        
+        res.fopt_values = self.display.fopt_values
+        res.favg_values = self.display.favg_values
 
         return res
 
@@ -338,25 +341,7 @@ class Algorithm:
 
         # display the output if defined by the algorithm
         if self.verbose and self.display is not None:
-            print('here display')
-            print(self.display)
-            print(self.pf)
-            print('evaluator')
-            print(self.evaluator)
-            print(dir(self.evaluator))
             self.display.do(self.problem, self.evaluator, self, pf=self.pf)
-            print(self.display.output)
-            
-            X, F, CV, G = self.opt.get("X", "F", "CV", "G")
-            print(X)
-            print(F)
-            print(CV)
-            print(G)
-            self.fopt_values.append(F)
-            
-            
-            print(self.display.output)
-            print(dir(self.display.output))
 
         # if a callback function is provided it is called after each iteration
         if self.callback is not None:
