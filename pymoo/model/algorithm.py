@@ -345,6 +345,10 @@ class Algorithm:
             print(CV)
             print(G)
             self.fopt_values.append(F)
+            
+            
+            print(self.display.output)
+            print(dir(self.display.output))
 
         # if a callback function is provided it is called after each iteration
         if self.callback is not None:
