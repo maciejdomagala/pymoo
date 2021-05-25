@@ -325,6 +325,12 @@ class Algorithm:
 
         # display the output if defined by the algorithm
         if self.verbose and self.display is not None:
+            print('here display')
+            print(self.display)
+            print(self.pf)
+            print('evaluator')
+            print(self.evaluator)
+            print(dir(self.evaluator)
             self.display.do(self.problem, self.evaluator, self, pf=self.pf)
 
         # if a callback function is provided it is called after each iteration
