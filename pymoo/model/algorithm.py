@@ -340,7 +340,10 @@ class Algorithm:
             print(self.display.output)
             
             X, F, CV, G = self.opt.get("X", "F", "CV", "G")
+            print(X)
             print(F)
+            print(CV)
+            print(G)
             self.fopt_values.append(F)
 
         # if a callback function is provided it is called after each iteration
