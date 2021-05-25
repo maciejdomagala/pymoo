@@ -82,6 +82,7 @@ def minimize(problem,
     algorithm.termination = termination
 
     # actually execute the algorithm
+    print("start optimizing")
     res = algorithm.solve()
 
     # store the deep copied algorithm in the result object
