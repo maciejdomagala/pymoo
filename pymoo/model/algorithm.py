@@ -272,6 +272,11 @@ class Algorithm:
         
         print('In RESULT')
         print(self.display)
+        
+        print('favg')
+        print(self.display.favg_values)
+        print('fopt')
+        print(self.display.fopt_values)
 
         # store the time when the algorithm as finished
         res.start_time = self.start_time
