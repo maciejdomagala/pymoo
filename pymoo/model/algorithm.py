@@ -119,6 +119,11 @@ class Algorithm:
         self.is_initialized = False
         # the time when the algorithm has been setup for the first time
         self.start_time = None
+        
+        
+        #for history
+        self.fopt_values = []
+        self.favg_values = []
 
     # =========================================================================================================
     # PUBLIC
@@ -333,6 +338,10 @@ class Algorithm:
             print(dir(self.evaluator))
             self.display.do(self.problem, self.evaluator, self, pf=self.pf)
             print(self.display.output)
+            
+            X, F, CV, G = self.opt.get("X", "F", "CV", "G")
+            print(F)
+            self.fopt_values.append(F)
 
         # if a callback function is provided it is called after each iteration
         if self.callback is not None:
