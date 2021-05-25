@@ -121,6 +121,9 @@ class SingleObjectiveDisplay(Display):
     def __init__(self, favg=True, **kwargs):
         super().__init__(**kwargs)
         self.favg = favg
+        
+        self.favg_values = []
+        self.fopt_values = []
 
     def _do(self, problem, evaluator, algorithm):
         super()._do(problem, evaluator, algorithm)
@@ -142,6 +145,9 @@ class SingleObjectiveDisplay(Display):
             self.output.append("fopt", "-")
             if self.favg:
                 self.output.append("favg", "-")
+                
+        self.favg_values.append(np.mean(_F))
+        self.fopt_values.append(opt.F[0])
 
 
 class MultiObjectiveDisplay(Display):
