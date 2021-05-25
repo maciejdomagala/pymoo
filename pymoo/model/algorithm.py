@@ -332,6 +332,7 @@ class Algorithm:
             print(self.evaluator)
             print(dir(self.evaluator))
             self.display.do(self.problem, self.evaluator, self, pf=self.pf)
+            print(self.display.output)
 
         # if a callback function is provided it is called after each iteration
         if self.callback is not None:
