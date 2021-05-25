@@ -330,7 +330,7 @@ class Algorithm:
             print(self.pf)
             print('evaluator')
             print(self.evaluator)
-            print(dir(self.evaluator)
+            print(dir(self.evaluator))
             self.display.do(self.problem, self.evaluator, self, pf=self.pf)
 
         # if a callback function is provided it is called after each iteration
