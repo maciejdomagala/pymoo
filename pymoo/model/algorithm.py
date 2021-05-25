@@ -269,6 +269,9 @@ class Algorithm:
 
     def result(self):
         res = Result()
+        
+        print('In RESULT')
+        print(self.display)
 
         # store the time when the algorithm as finished
         res.start_time = self.start_time
